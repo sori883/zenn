@@ -1,0 +1,26 @@
+{
+  "name": "zenn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "zenn preview --port 3200",
+    "lint": "textlint *.md ./articles/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sori883/zenn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sori883/zenn/issues"
+  },
+  "homepage": "https://github.com/sori883/zenn#readme",
+  "dependencies": {
+    "textlint": "^12.5.1",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "zenn-cli": "^0.1.137"
+  }
+}
