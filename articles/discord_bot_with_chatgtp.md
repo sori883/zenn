@@ -1,5 +1,5 @@
 ---
-title: "discord.jsとChatGPTでDiscord Botを作る" # 記事のタイトル
+title: "discordにChatGPTを導入した" # 記事のタイトル
 emoji: "🤖" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["discord", "chatgpt", "discordjs", "discordbot", "openai"]
@@ -11,7 +11,7 @@ published: true # 公開設定（falseにすると下書き）
 DiscordにChatGPTを導入してみたので、その備忘録を残します。  
 
 成果物は以下です。  
-https://github.com/sori883/chatGTP_discordBot  
+https://github.com/sori883/ChatGTPinDiscord  
 
 # 導入
 
