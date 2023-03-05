@@ -10,17 +10,17 @@ gpt-3.5-turboを使える[Chat completions](https://platform.openai.com/docs/gui
 # 実装
 ベースは前に書いた[discordにChatGPTを導入した](https://zenn.dev/sorinaji/articles/discord_bot_with_chatgtp)を使用します。  
 
-modelを`gpt-3.5-turbo`に変更して`messages`にPronptがセットされるように変更しました  
+modelを`gpt-3.5-turbo`に変更して`messages`にPromptがセットされるように変更しました  
 
 ```ts:main.ts:
 import { Configuration, OpenAIApi } from 'openai';
-import { character } from 'roleplay/character'; // 人格形成用のPronpt
+import { character } from 'roleplay/character'; // 人格形成用のPrompt
 
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages:[
-        {'role': 'system', 'content': character}, // ここで人格形成用のPronptを指定
-        {'role': 'user', 'content': message.content.trim()}, // Discordに投稿されたメッセージをPronptとして指定
+        {'role': 'system', 'content': character}, // ここで人格形成用のPromptを指定
+        {'role': 'user', 'content': message.content.trim()}, // Discordに投稿されたメッセージをPromptとして指定
       ],
       max_tokens: 1024,
       n: 1,
@@ -32,7 +32,7 @@ import { character } from 'roleplay/character'; // 人格形成用のPronpt
     await message.reply(completion.data.choices[0].message?.content);
 ```
 
-character.tsでは、人格形成用のPronptを以下の通り設定してみます。
+character.tsでは、人格形成用のPromptを以下の通り設定してみます。
 
 ```ts:character.ts
 export const character = `
