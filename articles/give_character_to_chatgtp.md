@@ -1,5 +1,5 @@
 ---
-title: "ChatGTPに人格を与えて遊んでみた" # 記事のタイトル
+title: "ChatGPTに人格を与えて遊んでみた" # 記事のタイトル
 emoji: "🤖" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["discord", "chatgpt", "openai"]
@@ -8,9 +8,9 @@ published: true # 公開設定（falseにすると下書き）
 gpt-3.5-turboを使える[Chat completions](https://platform.openai.com/docs/guides/chat)がリリースされていたので、人格を与えて遊んでみました。
 
 # 実装
-ベースは前に書いた[discordにChatGPTを導入した](https://zenn.dev/sorinaji/articles/discord_bot_with_chatgtp)を使用します。  
+ベースは前に書いた[discordにChatGPTを導入した](https://zenn.dev/sorinaji/articles/discord_bot_with_chatgtp)を使用します。
 
-modelを`gpt-3.5-turbo`に変更して`messages`にPromptがセットされるように変更しました  
+modelを`gpt-3.5-turbo`に変更して`messages`にPromptがセットされるように変更しました
 
 ```ts:main.ts:
 import { Configuration, OpenAIApi } from 'openai';
@@ -27,7 +27,7 @@ import { character } from 'roleplay/character'; // 人格形成用のPrompt
       temperature: 0.5,
     });
 
-    // ChatGTPの回答を取得してDiscordに送信
+    // ChatGPTの回答を取得してDiscordに送信
     if (completion.data.choices[0].message?.content === undefined) throw new Error();
     await message.reply(completion.data.choices[0].message?.content);
 ```
