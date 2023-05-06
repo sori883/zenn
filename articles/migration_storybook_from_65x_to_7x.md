@@ -49,7 +49,7 @@ npx storybook@latest upgrade
   "build-storybook": "storybook build"
 ```
 
-3. Next.js環境では、`framework`に`@storybook/react`、`builder`に`@storybook/builder-webpack5`を指定して、使用していましたが、`@storybook/nextjs`を使用するようになりました。  
+3. Next.js環境では、`framework`に`@storybook/react`、`builder`に`@storybook/builder-webpack5`を使用していましたが、`@storybook/nextjs`を使用するようになりました。  
 下記に`y`と返すと不要なパッケージを削除して`@storybook/nextjs`をインストールします。  
 ```
 Do you want to run the 'new-frameworks' migration on your project?
@@ -130,7 +130,7 @@ module.exports = {
 最後に、非推奨だらけになったStoryを修正しました。  
 
 - ComponentMeta, ComponentStoryなどが非推奨の型になり、代わりに Meta, StoryObjを使用する  
-- CSF2も非推奨なので、CSF3に書き換えます。
+- CSF2も非推奨なので、CSF3に書き換え
 
 書き換え前
 ```tsx:stories.tsx
